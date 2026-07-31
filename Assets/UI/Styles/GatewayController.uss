@@ -1,0 +1,93 @@
+/* GatewayController.uss */
+
+#gateway-root {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#gateway-header {
+    margin-bottom: var(--spacing-md);
+}
+
+#gateway-content {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#filter-palette {
+    flex-direction: column;
+    margin-bottom: var(--spacing-md);
+}
+
+#filter-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: var(--spacing-sm);
+}
+
+.filter-block {
+    background-color: var(--color-bg-deep);
+    border-width: 1px;
+    border-color: var(--color-accent-amber);
+    border-radius: 4px;
+    padding: var(--spacing-sm);
+    margin-right: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    width: 180px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    cursor: pan; /* Indicates draggability */
+}
+
+.filter-block:hover {
+    background-color: rgba(255, 176, 0, 0.2);
+}
+
+#pipeline-container {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#pipeline-slots-row {
+    flex-direction: row;
+    align-items: center;
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-md);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-glass);
+}
+
+.pipeline-slot {
+    width: 190px;
+    height: 70px;
+    border-width: 2px;
+    border-color: var(--color-panel-border);
+    border-radius: 4px;
+    margin-left: var(--spacing-sm);
+    margin-right: var(--spacing-sm);
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255, 0.02);
+}
+
+.pipeline-slot.drop-target-active {
+    border-color: var(--color-accent-cyan);
+    background-color: rgba(0, 240, 255, 0.1);
+}
+
+.pipeline-slot.locked {
+    border-color: rgba(255, 51, 51, 0.3);
+    background-color: rgba(255, 51, 51, 0.05);
+}
+
+.stream-indicator {
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg-deep);
+    border-radius: 40px; /* circle */
+    border-width: 2px;
+    border-color: var(--color-accent-cyan);
+}

@@ -1,0 +1,34 @@
+/* TopologyMap.uss */
+
+#topology-root {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+#map-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* Basic grid pattern representing the digital space */
+    background-color: var(--color-bg-deep);
+}
+
+#graph-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2000px;
+    height: 2000px;
+    /* Will be manipulated for Pan/Zoom */
+}
+
+#map-controls {
+    position: absolute;
+    bottom: var(--spacing-xl);
+    right: var(--spacing-xl);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-glass);
+}

@@ -1,0 +1,50 @@
+:root {
+    /* Glassmorphism Color Palette */
+    --color-bg-deep: rgba(10, 15, 25, 0.95);
+    --color-panel-glass: rgba(25, 35, 55, 0.4);
+    --color-panel-border: rgba(100, 150, 255, 0.2);
+    
+    /* Accents */
+    --color-accent-cyan: #00F0FF;
+    --color-accent-amber: #FFB000;
+    --color-accent-red: #FF3333;
+    
+    /* Typography */
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: rgba(255, 255, 255, 0.6);
+    --color-text-muted: rgba(255, 255, 255, 0.3);
+
+    /* Spacing & Radii */
+    --radius-glass: 12px;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+}
+
+/* Base Glass Panel Class */
+.glass-panel {
+    background-color: var(--color-panel-glass);
+    border-width: 1px;
+    border-color: var(--color-panel-border);
+    border-radius: var(--radius-glass);
+    /* Note: Backdrop blur is not fully supported in standard UI Toolkit yet without custom shaders/RenderTextures, 
+       but we set up the visual style to match a frosted glass aesthetic */
+    padding: var(--spacing-md);
+}
+
+.text-primary {
+    color: var(--color-text-primary);
+    font-size: 14px;
+}
+
+.text-header {
+    color: var(--color-text-primary);
+    font-size: 18px;
+    -unity-font-style: bold;
+}
+
+.text-accent {
+    color: var(--color-accent-cyan);
+}

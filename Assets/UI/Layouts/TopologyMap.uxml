@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:engine="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
+>
+    <engine:Style src="project://database/Assets/UI/Styles/Variables.uss" />
+    <engine:Style src="project://database/Assets/UI/Styles/TopologyMap.uss" />
+
+    <engine:VisualElement name="topology-root">
+        <!-- Background layer for map grid or fog of war -->
+        <engine:VisualElement name="map-background" />
+
+        <!-- Container where nodes and connections will be instantiated -->
+        <engine:VisualElement name="graph-container">
+            <!-- Dynamic NodeViews and ConnectionViews go here -->
+        </engine:VisualElement>
+
+        <!-- Overlay for map controls (Zoom/Pan info) -->
+        <engine:VisualElement name="map-controls" class="glass-panel">
+            <engine:Label text="TOPOLOGY: SECTOR 7G" class="text-header" />
+            <engine:Label text="STATUS: DEGRADED (FOG OF WAR ACTIVE)" class="text-accent" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+
+</engine:UXML>

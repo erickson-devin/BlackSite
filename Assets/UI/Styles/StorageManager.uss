@@ -1,0 +1,79 @@
+/* StorageManager.uss */
+
+#storage-root {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#storage-header {
+    margin-bottom: var(--spacing-md);
+}
+
+#storage-dashboard {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+#disk-usage-panel {
+    width: 30%;
+    margin-right: var(--spacing-md);
+    flex-direction: column;
+    align-items: center;
+}
+
+.disk-visualizer {
+    width: 150px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-width: 1px;
+    border-color: var(--color-panel-border);
+    border-radius: var(--radius-glass);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    justify-content: flex-end; /* Fill from bottom */
+    overflow: hidden;
+}
+
+#disk-used-bar {
+    width: 100%;
+    height: 72%; /* Bound dynamically later */
+    background-color: var(--color-accent-amber);
+    transition-property: height;
+    transition-duration: 0.5s;
+}
+
+#processing-queue-panel {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#job-list {
+    flex-grow: 1;
+    margin-top: var(--spacing-md);
+}
+
+.job-item {
+    flex-direction: column;
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-sm);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.job-title {
+    margin-bottom: var(--spacing-xs);
+}
+
+.job-progress {
+    height: 20px;
+}
+
+.job-progress .unity-progress-bar__background {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-width: 1px;
+    border-color: var(--color-panel-border);
+}
+
+.job-progress .unity-progress-bar__progress {
+    background-color: var(--color-accent-cyan);
+}

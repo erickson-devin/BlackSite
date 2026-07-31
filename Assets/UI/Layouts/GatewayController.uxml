@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:engine="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
+>
+    <engine:Style src="project://database/Assets/UI/Styles/Variables.uss" />
+    <engine:Style src="project://database/Assets/UI/Styles/GatewayController.uss" />
+
+    <engine:VisualElement name="gateway-root">
+        <!-- Top Title -->
+        <engine:VisualElement name="gateway-header" class="glass-panel">
+            <engine:Label text="GATEWAY CONTROLLER" class="text-header" />
+            <engine:Label text="CONFIGURE FIREWALL PIPELINE RULES" class="text-secondary" />
+        </engine:VisualElement>
+
+        <engine:VisualElement name="gateway-content">
+            
+            <!-- Available Filter Blocks Palette -->
+            <engine:VisualElement name="filter-palette" class="glass-panel">
+                <engine:Label text="AVAILABLE FILTERS" class="text-primary" />
+                <engine:VisualElement name="filter-list">
+                    <engine:VisualElement class="filter-block draggable" name="filter-block-ip">
+                        <engine:Label text="BLOCK IP" class="text-primary" />
+                    </engine:VisualElement>
+                    <engine:VisualElement class="filter-block draggable" name="filter-dpi">
+                        <engine:Label text="DEEP PACKET INSPECTION" class="text-primary" />
+                    </engine:VisualElement>
+                    <engine:VisualElement class="filter-block draggable" name="filter-quarantine">
+                        <engine:Label text="AUTO-QUARANTINE" class="text-primary" />
+                    </engine:VisualElement>
+                </engine:VisualElement>
+            </engine:VisualElement>
+
+            <!-- The Linear Pipeline Slots -->
+            <engine:VisualElement name="pipeline-container" class="glass-panel">
+                <engine:Label text="ACTIVE PIPELINE" class="text-primary" />
+                
+                <engine:VisualElement name="pipeline-slots-row">
+                    <!-- Data Stream IN -->
+                    <engine:VisualElement class="stream-indicator">
+                        <engine:Label text="DATA IN" class="text-accent" />
+                    </engine:VisualElement>
+                    
+                    <!-- Slots -->
+                    <engine:VisualElement class="pipeline-slot drop-target" name="slot-1" />
+                    <engine:VisualElement class="pipeline-slot drop-target" name="slot-2" />
+                    <engine:VisualElement class="pipeline-slot drop-target locked" name="slot-3">
+                        <engine:Label text="LOCKED" class="text-muted" />
+                    </engine:VisualElement>
+                    <engine:VisualElement class="pipeline-slot drop-target locked" name="slot-4">
+                        <engine:Label text="LOCKED" class="text-muted" />
+                    </engine:VisualElement>
+                    
+                    <!-- Data Stream OUT -->
+                    <engine:VisualElement class="stream-indicator">
+                        <engine:Label text="DATA OUT" class="text-accent" />
+                    </engine:VisualElement>
+                </engine:VisualElement>
+            </engine:VisualElement>
+            
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

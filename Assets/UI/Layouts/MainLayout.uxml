@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:engine="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
+>
+    <!-- We reference our variables first, then our specific layout styles -->
+    <engine:Style src="project://database/Assets/UI/Styles/Variables.uss" />
+    <engine:Style src="project://database/Assets/UI/Styles/MainLayout.uss" />
+
+    <engine:VisualElement name="app-root">
+        
+        <!-- Left Sidebar Navigation -->
+        <engine:VisualElement name="sidebar" class="glass-panel">
+            <engine:Label text="SOC GOD-MODE" class="text-header text-accent brand-title" />
+            
+            <engine:VisualElement class="nav-menu">
+                <engine:Button name="btn-topology" text="Topology Map" class="nav-button" />
+                <engine:Button name="btn-gateway" text="Gateway Controller" class="nav-button" />
+                <engine:Button name="btn-storage" text="Storage Array" class="nav-button" />
+                <engine:Button name="btn-upgrades" text="System Upgrades" class="nav-button" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+
+        <!-- Right Side (Top Bar + Main Content) -->
+        <engine:VisualElement name="main-container">
+            
+            <!-- Top Status Bar -->
+            <engine:VisualElement name="top-bar" class="glass-panel">
+                <engine:VisualElement class="status-indicator">
+                    <engine:Label text="THREAT LEVEL:" class="text-secondary" />
+                    <!-- Using Unity 6 Data Binding for the value -->
+                    <engine:Label name="threat-level-value" text="HIGH" class="text-accent" />
+                </engine:VisualElement>
+                
+                <engine:VisualElement class="status-indicator">
+                    <engine:Label text="POWER:" class="text-secondary" />
+                    <engine:Label name="power-value" text="85%" class="text-primary" />
+                </engine:VisualElement>
+                
+                <engine:VisualElement class="status-indicator">
+                    <engine:Label text="BANDWIDTH:" class="text-secondary" />
+                    <engine:Label name="bandwidth-value" text="9.2 TB/s" class="text-primary" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+
+            <!-- Main Content Area where modules will be loaded dynamically -->
+            <engine:VisualElement name="content-area">
+                <!-- Modules injected here -->
+            </engine:VisualElement>
+            
+        </engine:VisualElement>
+        
+    </engine:VisualElement>
+</engine:UXML>

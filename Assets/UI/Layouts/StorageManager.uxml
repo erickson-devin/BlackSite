@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:engine="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd"
+>
+    <engine:Style src="project://database/Assets/UI/Styles/Variables.uss" />
+    <engine:Style src="project://database/Assets/UI/Styles/StorageManager.uss" />
+
+    <engine:VisualElement name="storage-root">
+        <!-- Top Title -->
+        <engine:VisualElement name="storage-header" class="glass-panel">
+            <engine:Label text="STORAGE ARRAY" class="text-header" />
+            <engine:Label text="MANAGE BATCH DECRYPTION AND STORAGE I/O" class="text-secondary" />
+        </engine:VisualElement>
+
+        <engine:VisualElement name="storage-dashboard">
+            
+            <!-- Left Side: Disk Usage -->
+            <engine:VisualElement name="disk-usage-panel" class="glass-panel">
+                <engine:Label text="DISK USAGE" class="text-primary" />
+                <engine:VisualElement class="disk-visualizer">
+                    <engine:VisualElement name="disk-used-bar" />
+                </engine:VisualElement>
+                <engine:Label name="disk-text" text="72% USED" class="text-accent" />
+            </engine:VisualElement>
+
+            <!-- Right Side: Processing Queue -->
+            <engine:VisualElement name="processing-queue-panel" class="glass-panel">
+                <engine:Label text="ACTIVE BATCH JOBS (THREADS: 4)" class="text-primary" />
+                
+                <engine:ScrollView name="job-list">
+                    <!-- Template for a job -->
+                    <engine:VisualElement class="job-item">
+                        <engine:Label text="PAYLOAD_BETA_EXTRACT" class="text-secondary job-title" />
+                        <engine:ProgressBar value="45" title="45%" class="job-progress" />
+                    </engine:VisualElement>
+                    
+                    <engine:VisualElement class="job-item">
+                        <engine:Label text="MALWARE_HEURISTICS_SCAN" class="text-secondary job-title" />
+                        <engine:ProgressBar value="88" title="88%" class="job-progress" />
+                    </engine:VisualElement>
+                </engine:ScrollView>
+            </engine:VisualElement>
+            
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
