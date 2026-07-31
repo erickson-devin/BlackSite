@@ -3,10 +3,9 @@ using UnityEngine.UIElements;
 
 namespace BlackSite.UI.Topology
 {
-    public class NodeView : VisualElement
+    [UxmlElement]
+    public partial class NodeView : VisualElement
     {
-        public new class UxmlFactory : UxmlFactory<NodeView, UxmlTraits> { }
-
         private Label _titleLabel;
         private Label _statusLabel;
 

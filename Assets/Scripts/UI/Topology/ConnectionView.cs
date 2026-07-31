@@ -3,10 +3,9 @@ using UnityEngine.UIElements;
 
 namespace BlackSite.UI.Topology
 {
-    public class ConnectionView : VisualElement
+    [UxmlElement]
+    public partial class ConnectionView : VisualElement
     {
-        public new class UxmlFactory : UxmlFactory<ConnectionView, UxmlTraits> { }
-
         public NodeView FromNode { get; set; }
         public NodeView ToNode { get; set; }
         public bool IsActive { get; set; } = true;

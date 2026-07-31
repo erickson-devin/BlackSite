@@ -54,7 +54,7 @@ namespace BlackSite.UI.Gateway
         {
             if (_activeDragElement != element || !element.HasPointerCapture(evt.pointerId)) return;
 
-            Vector2 delta = evt.position - _dragStartPos;
+            Vector2 delta = (Vector2)evt.position - _dragStartPos;
             element.style.left = element.layout.x + delta.x;
             element.style.top = element.layout.y + delta.y;
             _dragStartPos = evt.position;
