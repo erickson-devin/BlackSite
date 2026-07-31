@@ -13,13 +13,26 @@
         
         <!-- Left Sidebar Navigation -->
         <engine:VisualElement name="sidebar" class="glass-panel">
+            <engine:VisualElement class="glass-bg" />
             <engine:Label text="SOC GOD-MODE" class="text-header text-accent brand-title" />
             
             <engine:VisualElement class="nav-menu">
-                <engine:Button name="btn-topology" text="Topology Map" class="nav-button" />
-                <engine:Button name="btn-gateway" text="Gateway Controller" class="nav-button" />
-                <engine:Button name="btn-storage" text="Storage Array" class="nav-button" />
-                <engine:Button name="btn-upgrades" text="System Upgrades" class="nav-button" />
+                <engine:Button name="btn-gateway" class="nav-button">
+                    <engine:VisualElement class="nav-icon" style="background-image: url('project:/Assets/UI/Icons/shield-half.svg');" />
+                    <engine:Label text="Gateway Controller" class="nav-label" />
+                </engine:Button>
+                <engine:Button name="btn-topology" class="nav-button">
+                    <engine:VisualElement class="nav-icon" style="background-image: url('project:/Assets/UI/Icons/network.svg');" />
+                    <engine:Label text="Topology Map" class="nav-label" />
+                </engine:Button>
+                <engine:Button name="btn-storage" class="nav-button">
+                    <engine:VisualElement class="nav-icon" style="background-image: url('project:/Assets/UI/Icons/server.svg');" />
+                    <engine:Label text="Storage Array" class="nav-label" />
+                </engine:Button>
+                <engine:Button name="btn-settings" class="nav-button">
+                    <engine:VisualElement class="nav-icon" style="background-image: url('project:/Assets/UI/Icons/sliders-horizontal.svg');" />
+                    <engine:Label text="Settings" class="nav-label" />
+                </engine:Button>
             </engine:VisualElement>
         </engine:VisualElement>
 
@@ -28,6 +41,7 @@
             
             <!-- Top Status Bar -->
             <engine:VisualElement name="top-bar" class="glass-panel">
+                <engine:VisualElement class="glass-bg" />
                 <engine:VisualElement class="status-indicator">
                     <engine:Label text="THREAT LEVEL:" class="text-secondary" />
                     <!-- Using Unity 6 Data Binding for the value -->
@@ -46,7 +60,7 @@
             </engine:VisualElement>
 
             <!-- Main Content Area where modules will be loaded dynamically -->
-            <engine:VisualElement name="content-area">
+            <engine:VisualElement name="main-content-area" class="glass-panel">
                 <!-- Modules injected here -->
             </engine:VisualElement>
             
